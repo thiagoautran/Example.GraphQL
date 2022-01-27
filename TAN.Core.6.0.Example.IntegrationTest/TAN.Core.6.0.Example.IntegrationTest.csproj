@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>TAN.Core._5._0.Skokka.Test</RootNamespace>
+    <RootNamespace>TAN.Core._6._0.Example.IntegrationTest</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>

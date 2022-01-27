@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading.Tasks;
 
-namespace TAN.Core._5._0.Skokka.Api.Controllers.v1
+namespace TAN.Core._6._0.Example.GraphQL.Controllers.v1
 {
     [Produces("application/json")]
     [ApiVersion("1")]
