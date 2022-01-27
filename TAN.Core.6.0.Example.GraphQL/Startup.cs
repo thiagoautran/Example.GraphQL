@@ -1,10 +1,10 @@
+using System;
 using GraphQL.Server;
-using GraphQL.Server.Ui.Playground;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using TAN.Core._6._0.Example.ApplicationCore.Interfaces;
 using TAN.Core._6._0.Example.ApplicationCore.Queries;
 using TAN.Core._6._0.Example.ApplicationCore.Schemas;
@@ -23,39 +23,27 @@ namespace TAN.Core._6._0.Example.GraphQL
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddSingleton<ProductType>();
+            services.AddSingleton<CarvedRockQuery>();
+            services.AddSingleton<ISchema, CarvedRockSchema>();
 
-            services.AddScoped<CarvedRockSchema>();
-            services.AddScoped<CarvedRockQuery>();
-            services.AddScoped<ProductType>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
 
-            services.AddControllers();
-            services.AddApiVersioning();
+            services.AddGraphQL(options =>
+            {
+                options.EnableMetrics = false;
+            })
+            .AddSystemTextJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseGraphQL<CarvedRockSchema>();
-            app.UseGraphQLPlayground(new PlaygroundOptions());
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseGraphQL<ISchema>();
+            app.UseGraphQLAltair();
         }
     }
 }

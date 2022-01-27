@@ -7,9 +7,9 @@ namespace TAN.Core._6._0.Example.ApplicationCore.Types
     {
         public ProductType()
         {
-            Field(product => product.Id);
-            Field(product => product.Name);
-            Field(product => product.Description);
+            Field(product => product.Id).Description("Identificador unico do produto.");
+            Field(product => product.Name).Description("Nome do produto.");
+            Field(product => product.Description).Description("Descrição do produto.");
         }
     }
 }
