@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>TAN.Core._5._0.Skokka.Api</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TAN.Core.6.0.Example.ApplicationCore\TAN.Core.6.0.Example.ApplicationCore.csproj" />
+    <ProjectReference Include="..\TAN.Core.6.0.Example.Infrastructure\TAN.Core.6.0.Example.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
