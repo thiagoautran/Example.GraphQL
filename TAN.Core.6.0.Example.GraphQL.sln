@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{cf09c5db-f775-4113-8956-28410b357f74}") = "01 - UserInterface", "01 - UserInterface", "{e486d08f-3ce8-4c96-b73a-7a1f650b229c}"
+EndProject
+Project("{cf09c5db-f775-4113-8956-28410b357f74}") = "02 - ApplicationCore", "02 - ApplicationCore", "{58de1b7b-88cd-4b69-a35c-5fa355b50e6f}"
+EndProject
+Project("{cf09c5db-f775-4113-8956-28410b357f74}") = "03 - Infrastructure", "03 - Infrastructure", "{35ad07b3-2f8d-4cf9-94d2-5f2c4271af26}"
+EndProject
+Project("{cf09c5db-f775-4113-8956-28410b357f74}") = "04 - Test", "04 - Test", "{57e94d18-780d-4ca4-8f1d-3d7fb6b70dc0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAN.Core.6.0.Example.GraphQL", "TAN.Core.6.0.Example.GraphQL\TAN.Core.6.0.Example.GraphQL.csproj", "{70452254-56C4-41D2-9B46-51ADF6E2364D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAN.Core.6.0.Example.IntegrationTest", "TAN.Core.6.0.Example.IntegrationTest\TAN.Core.6.0.Example.IntegrationTest.csproj", "{FCB51F4A-F5D8-4E03-A6B2-B0B618B8DEC7}"
@@ -19,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{70452254-56C4-41D2-9B46-51ADF6E2364D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +77,17 @@ Global
 		{C622574D-E5F6-40BC-B988-6D2CBD75A428}.Release|x64.Build.0 = Release|Any CPU
 		{C622574D-E5F6-40BC-B988-6D2CBD75A428}.Release|x86.ActiveCfg = Release|Any CPU
 		{C622574D-E5F6-40BC-B988-6D2CBD75A428}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70452254-56C4-41D2-9B46-51ADF6E2364D} = {e486d08f-3ce8-4c96-b73a-7a1f650b229c}
+		{C622574D-E5F6-40BC-B988-6D2CBD75A428} = {58de1b7b-88cd-4b69-a35c-5fa355b50e6f}
+		{2EFC2F19-CE8C-49FF-B6FC-FFFC528273D2} = {35ad07b3-2f8d-4cf9-94d2-5f2c4271af26}
+		{FCB51F4A-F5D8-4E03-A6B2-B0B618B8DEC7} = {57e94d18-780d-4ca4-8f1d-3d7fb6b70dc0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0fbf0378-411a-46d5-81c3-368b86fc00e7}
 	EndGlobalSection
 EndGlobal
