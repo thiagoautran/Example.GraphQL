@@ -19,11 +19,14 @@ namespace TAN.Core._5._0.Skokka.Api.Controllers.v1
         [MapToApiVersion("1")]
         public async Task<ContentResult> GetEscortsHtmlAsync()
         {
-            return new ContentResult 
-            {
-                ContentType = "text/html",
-                Content = string.Empty
-            };
+            return await Task.Run(() => 
+            { 
+                return new ContentResult 
+                {
+                    ContentType = "text/html",
+                    Content = string.Empty
+                };
+            });
         }
     }
 }
